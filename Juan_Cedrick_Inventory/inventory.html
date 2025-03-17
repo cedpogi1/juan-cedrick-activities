@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+        .table thead {
+            background-color: #007bff;
+            color: white;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+        .table td, .table th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .action-buttons button {
+            margin: 0 5px;
+        }
+        .header-container {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-container">
+            <h1>Inventory System</h1>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="search" class="form-control" placeholder="Search products...">
+            <button class="btn btn-custom btn-lg btn-block">Add New Product</button>
+        </div>
+
+        <div class="table-container">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>ced</td>
+                        <td>20</td>
+                        <td>$50</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>erald</td>
+                        <td>30</td>
+                        <td>$30</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>romeo</td>
+                        <td>30</td>
+                        <td>$30</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>marvin</td>
+                            <td>30</td>
+                            <td>$30</td>
+                            <td class="action-buttons">
+                                <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>dominique</td>
+                        <td>10</td>
+                        <td>$20</td>
+                        <td class="action-buttons">
+                            <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>justine</td>
+                            <td>30</td>
+                            <td>$30</td>
+                            <td class="action-buttons">
+                                <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>axel</td>
+                                <td>30</td>
+                                <td>$30</td>
+                                <td class="action-buttons">
+                                    <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>yvonne</td>
+                                    <td>30</td>
+                                    <td>$30</td>
+                                    <td class="action-buttons">
+                                        <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                        <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>trisha</td>
+                                        <td>30</td>
+                                        <td>$30</td>
+                                        <td class="action-buttons">
+                                            <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                            <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>mercy</td>
+                                            <td>30</td>
+                                            <td>$30</td>
+                                            <td class="action-buttons">
+                                                <button class="btn btn-warning btn-sm" onclick="editItem(this)">Edit</button>
+                                                <button class="btn btn-danger btn-sm" onclick="deleteItem(this)">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function editItem(button) {
+            const row = button.closest('tr');
+            alert('Editing row: ' + row.innerText);
+        }
+
+        function deleteItem(button) {
+            const row = button.closest('tr');
+            row.remove();
+            alert('Row deleted');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body{
+    background-color: white;
+}
+
+.pages{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 600px;
+    width: 500px;
+    background-color: pink;
+    border: 5px outset black;
+}
+.page1{
+    border: 5px;
+    margin: 100px;
+    padding: 10px;
+    height: 400px;
+    width: 385px;
+    background-color: aliceblue;    
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+button{
+    height: 40px;
+    margin-top: 500px;
+    width: 90px;
+    background-color: rgb(255, 51, 0);
+    color: white;
+    border: 3px; inset: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 100px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    position:relative;
+}
+button:hover{
+    transition: ease-in 0.5s;
+    background-color: aliceblue;
+    color: blue;
+    border: 3px outset rgb(0, 0, 0)
+
+}

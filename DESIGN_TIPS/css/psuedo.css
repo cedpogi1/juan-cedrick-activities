@@ -1,0 +1,25 @@
+.google{
+    background-color: pink;
+}
+.google:hover{
+    background-color: aqua;
+    color:blueviolet;
+}
+.google:active{
+background-color: black;
+}
+a:link{
+    color:blue
+}
+a:hover{
+    background-color: brown;
+    color: darkgreen;
+}
+a:hover{
+    background-color: darkkhaki;
+    color: greenyellow;
+}
+
+a:visited {
+    color: darkorange;
+}
