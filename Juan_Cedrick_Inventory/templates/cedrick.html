@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cedrick.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Login</h2>
+                <span id="message" class="error-message"></span>
+
+                <div class="input-group">
+                    <input type="text" id="username" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button onclick="login()">Login</button>
+
+                <p class="register-text">
+                    No account? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simple Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3>Create Account</h3>
+                    <div class="input-group">
+                        <input type="text" id="reg_username" required>
+                        <label>Username</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="reg_password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirm_password" required>
+                        <label>Confirm Password</label>
+                    </div>
+                    <div id="register_message" class="error-message"></div>
+                    <div class="modal-buttons">
+                        <button class="cancel-btn" data-bs-dismiss="modal">Cancel</button>
+                        <button class="register-btn" onclick="register()">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>
